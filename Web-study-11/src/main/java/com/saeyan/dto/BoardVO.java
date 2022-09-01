@@ -2,14 +2,22 @@ package com.saeyan.dto;
 
 import java.sql.Timestamp;
 
-public class BoardVo {
+public class BoardVO {
 	private int num;
 	private String name;
 	private String email;
 	private String pass;
 	private String title;
+	private String content;
 	private int readcount;
 	private Timestamp writedate;
+	
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
 	public int getNum() {
 		return num;
 	}
