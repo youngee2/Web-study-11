@@ -81,4 +81,23 @@ public class BoardDAO {
 			DBManager.close(conn, pstmt);
 		}
 	}
+
+	public void updateReadaCount(String num) {
+		String sql = "update bboard set readcount=readcount+1 where num=?";
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, num);
+
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt);
+		}
+	}
 }
