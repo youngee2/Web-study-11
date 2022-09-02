@@ -1,6 +1,7 @@
 package com.saeyan.controller;
 
 import com.saeyan.controller.action.Action;
+import com.saeyan.controller.action.BoardListAction;
 
 public class ActionFactory {
 	private static ActionFactory instance = new ActionFactory();
@@ -16,7 +17,11 @@ public class ActionFactory {
 	public Action getAction(String command) {
 		Action action = null;
 		System.out.println("ActionFactory");
+		
+		if(command.equals("board_list")) {
+			action = new BoardListAction();
+		}
+		
 		return action;
 	}
-
 }
