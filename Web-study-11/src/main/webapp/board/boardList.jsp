@@ -15,7 +15,7 @@
 		<h1>게시글 리스트</h1>
 		<table class="list">
 			<tr>
-				<td cospan="5" style="border: white; text-align: right"><a
+				<td colspan="5" style="border: white; text-align: right"><a
 					href="BoardServlet?command=board_write_form">게시글 등록</a></td>
 			</tr>
 			<tr>
